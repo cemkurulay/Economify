@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CemKurulay_HW1</string>
+    <string name="selectCurrencyTextView">Choose Currency Type</string>
+    <string name="politicanButtonText">What do politicians say?</string>
+    <string name="selectExchangeRateText">Exchange rate: </string>
+    <string name="publicButtonText">What does the public say?</string>
+    <string name="currencyDescriptionText">Currency Image</string>
+    <string name="politicianText">"1₺ = "</string>
+    <string name="toastTempMessage">"This feature is under development. Thanks for your patience."</string>
+    <string name="politicianSoundButtonText">Listen to what the politician says</string>
+    <string name="publicSoundButtonText">Listen to what the public says</string>
+    <string name="politicianReadButtonText">Read what the politician says</string>
+    <string name="publicReadButtonText">Read what the public says</string>
+    <string name="currencyAmountHintText">Enter any amount</string>
+    <string name="moneyConverterButtonText">Get converted amount</string>
+    <array name="currencyTypesArray">
+        <item>Euro</item>
+        <item>Dollar</item>
+    </array>
+</resources>

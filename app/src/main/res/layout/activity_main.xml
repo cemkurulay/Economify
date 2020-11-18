@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/publicSaysButton"
+        android:onClick="onPublicClick"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="278dp"
+        android:text="@string/publicButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/politicianSaysButton" />
+
+    <Spinner
+        android:id="@+id/currencySpinner"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:entries="@array/currencyTypesArray"
+        app:layout_constraintBottom_toTopOf="@+id/currencyImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseCurrencyTextView" />
+
+    <ImageView
+        android:id="@+id/currencyImageView"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/currencyDescriptionText"
+        app:layout_constraintBottom_toTopOf="@+id/exchangeSeekBarTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currencySpinner"
+        app:srcCompat="@drawable/ic_dollarsymbol" />
+
+    <SeekBar
+        android:id="@+id/exchangeRateSeekBar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="47dp"
+        android:max="4"
+        android:min="0"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/politicianSaysButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exchangeSeekBarTextView" />
+
+    <Button
+        android:id="@+id/politicianSaysButton"
+        android:onClick="onPoliticianClick"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/politicanButtonText"
+        app:layout_constraintBottom_toTopOf="@+id/publicSaysButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exchangeRateSeekBar" />
+
+    <TextView
+        android:id="@+id/chooseCurrencyTextView"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/selectCurrencyTextView"
+        app:layout_constraintBottom_toTopOf="@+id/currencySpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exchangeSeekBarTextView"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/selectExchangeRateText"
+        app:layout_constraintBottom_toTopOf="@+id/exchangeRateSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currencyImageView" />
+
+    <EditText
+        android:id="@+id/foreignCurrencyAmountTextView"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/currencyAmountHintText"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publicSaysButton"
+        app:layout_constraintVertical_bias="0.226" />
+
+    <Button
+        android:id="@+id/convertMoneyButton"
+        android:onClick="onConvertMoneyClick"
+        android:layout_width="224dp"
+        android:layout_height="49dp"
+        android:text="@string/moneyConverterButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foreignCurrencyAmountTextView"
+        app:layout_constraintVertical_bias="0.226" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
